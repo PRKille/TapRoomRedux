@@ -14,7 +14,7 @@ const Keg = (props) => {
       <h3>{props.brand}:  {props.name}</h3>
       <h4>ABV: {props.abv} Price/Pint: {props.price}</h4>
       {hasInventory(props.inventory)}
-      <p>Pints left: {props.inventory}</p>
+      <button className="kegDetailsButton" onClick={() => props.onKegClick(props.id)}>Beer Details</button>
     </div>
   )
 }
@@ -23,9 +23,8 @@ Keg.propTypes = {
   id: PropTypes.number,
   inventory: PropTypes.number,
   name: PropTypes.string,
-  brand: PropTypes.string,
-  abv: PropTypes.string,
   price: PropTypes.string,
+  onKegClick: PropTypes.func
 }
 
 export default Keg;

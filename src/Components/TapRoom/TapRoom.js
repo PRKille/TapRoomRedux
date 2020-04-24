@@ -8,10 +8,11 @@ function TapRoom(props){
   function handleKegPurchaseSubmit(event) {
     event.preventDefault();
     props.onNewKegPurchase({
-      image: event.target.albumImg.value, 
-      title: event.target.albumName.value, 
-      artist: event.target.artistName.value, 
-      description: event.target.description.value,
+      name: event.target.name.value, 
+      brand: event.target.brand.value, 
+      price: event.target.price.value, 
+      abv: event.target.abv.value,
+      inventory: 124,
       id: v4()});
   }
 
@@ -28,8 +29,9 @@ function TapRoom(props){
               brand={keg.brand}
               price={keg.price}
               abv={keg.abv}
-              inventory={124}
-              id={keg.id} />
+              inventory={keg.inventory}
+              id={keg.id}
+              onKegClick={props.onKegSelection} />
           </React.Fragment>
         ))}
       </div>
@@ -60,9 +62,9 @@ function TapRoom(props){
 }
 
 TapRoom.propTypes = {
-  albums: PropTypes.arrayOf(PropTypes.object),
+  tapList: PropTypes.arrayOf(PropTypes.object),
   onNewKegPurchase: PropTypes.func,
-  onAlbumSelection: PropTypes.func
+  onKegSelection: PropTypes.func
 }
 
 export default TapRoom;

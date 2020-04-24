@@ -1,7 +1,8 @@
 import React from 'react';
 import '../App.css';
 import Header from './Header';
-import TapRoom from './TapRoom/TapRoom'
+import TapRoom from './TapRoom/TapRoom';
+import KegDetails from './KegDetails/KegDetails';
 
 class App extends React.Component {
 
@@ -9,7 +10,6 @@ class App extends React.Component {
     super(props);
     this.state = {
       showTapRoom: true,
-      showKegDetails: false,
       tapList: [
         {
           name: "Ranier",
@@ -45,10 +45,32 @@ class App extends React.Component {
       return {
         component:<TapRoom
           tapList={this.state.tapList}
+          onKegSelection={this.handleKegSelection}
         />
+      }
+    } else {
+      return{
+        component:<KegDetails
+          keg={this.state.selectedKeg}
+          handleBackToTapRoom={this.handleBackToTapRoom} />
       }
     }
   }
+
+  handleKegSelection = (id) => {
+    const selectedKeg = this.state.tapList.filter(keg => keg.id ===id)[0];
+    this.setState({
+      selectedKeg: selectedKeg,
+      showTapRoom: false
+    })
+  }
+
+  handleBackToTapRoom = () => {
+    this.setState({
+      showTapRoom: true
+    })
+  }
+  
   render() {
     let currentPage = this.currentPage();
     return (
