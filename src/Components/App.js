@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import Header from './Header';
+import TapRoom from './TapRoom/TapRoom'
 
 class App extends React.Component {
 
@@ -29,7 +30,7 @@ class App extends React.Component {
         {
           name: "ESB English Ale",
           brand: "Ferment",
-          price: "6",
+          price: "$6",
           abv: "5.4",
           inventory: 124,
           id: 3
@@ -41,20 +42,20 @@ class App extends React.Component {
 
   currentPage = () => {
     if (this.state.showTapRoom) {
-      return (
-        <TapRoom
+      return {
+        component:<TapRoom
           tapList={this.state.tapList}
         />
-      )
+      }
     }
   }
   render() {
-
+    let currentPage = this.currentPage();
     return (
       <React.Fragment>
         <Header />
         <p>Under Construction</p>
-        {currentPage}
+        {currentPage.component}
       </React.Fragment>
     );
   }
