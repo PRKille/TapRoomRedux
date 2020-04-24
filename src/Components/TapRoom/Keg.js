@@ -11,7 +11,7 @@ const Keg = (props) => {
 
   return (
     <div className="keg" id={props.id}>
-      <h3>{props.brand}:  {props.name}</h3>
+      <h3>{props.name}</h3>
       <h4>ABV: {props.abv} Price/Pint: {props.price}</h4>
       {hasInventory(props.inventory)}
       <button className="kegDetailsButton" onClick={() => props.onKegClick(props.id)}>Beer Details</button>

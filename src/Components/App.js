@@ -46,6 +46,7 @@ class App extends React.Component {
         component:<TapRoom
           tapList={this.state.tapList}
           onKegSelection={this.handleKegSelection}
+          onNewKegPurchase={this.handleNewKegPurchase}
         />
       }
     } else {
@@ -57,20 +58,24 @@ class App extends React.Component {
     }
   }
 
+  handleNewKegPurchase = (newKeg) => {
+    const newTapList = this.state.tapList.concat(newKeg);
+    this.setState({tapList: newTapList});
+  }
   handleKegSelection = (id) => {
     const selectedKeg = this.state.tapList.filter(keg => keg.id ===id)[0];
     this.setState({
       selectedKeg: selectedKeg,
       showTapRoom: false
-    })
+    });
   }
 
   handleBackToTapRoom = () => {
     this.setState({
       showTapRoom: true
-    })
+    });
   }
-  
+
   render() {
     let currentPage = this.currentPage();
     return (
