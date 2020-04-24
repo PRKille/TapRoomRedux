@@ -55,9 +55,19 @@ class App extends React.Component {
         component:<KegDetails
           keg={this.state.selectedKeg}
           handleBackToTapRoom={this.handleBackToTapRoom}
-          onKegDeletion={this.handleKegDelete} />
+          onKegDeletion={this.handleKegDelete}
+          onKegEdit={this.handleKegEdit} />
       }
     }
+  }
+
+  handleKegEdit= (newKeg) => {
+    const otherKegs = this.state.tapList.filter(keg => keg.id !== newKeg.id);
+    this.setState({
+      tapList: [...otherKegs, newKeg],
+      selectedKeg: {},
+      showTapRoom: true
+    });
   }
 
   handleKegDelete = (id) => {

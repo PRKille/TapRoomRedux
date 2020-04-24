@@ -7,7 +7,6 @@ import { v4 } from 'uuid';
 function TapRoom(props){
 
   function handleKegPurchaseSubmit(event) {
-    console.log("HandleKegPurchase");
     event.preventDefault();
     props.onNewKegPurchase({
       name: event.target.name.value, 
