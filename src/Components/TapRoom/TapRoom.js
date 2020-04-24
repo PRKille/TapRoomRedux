@@ -2,6 +2,8 @@ import React from 'react';
 import Keg from './Keg';
 import KegForm from '../KegFolder/KegForm'
 import PropTypes from "prop-types";
+import './TapRoom.css'
+import '../../App.css'
 import { v4 } from 'uuid';
 
 function TapRoom(props){
@@ -42,13 +44,14 @@ function TapRoom(props){
           </div>
         ))}
       </div>
-      <div>
-        <h3>Buy a new Keg</h3>
+      <hr />
+      <div className="form">
+        <h3>Buy a new Keg: <span>
         <KegForm 
         formSubmissionHandler={handleKegPurchaseSubmit}
         buttonText="Purchase Keg" />
+        </span></h3>
       </div>
-      
     </React.Fragment>
   )
 }
