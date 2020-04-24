@@ -16,11 +16,16 @@ function TapRoom(props){
       id: v4()});
   }
 
+  let sortList = props.tapList.sort((a,b) =>{
+    const nameA = a.name.toLowerCase();
+    const nameB = b.name.toLowerCase();
+    return nameA < nameB ? -1 : 1;
+  });
   
   return (
     <React.Fragment>
       <div className="kegs">
-        {props.tapList.map((keg) => (
+        {sortList.map((keg) => (
           <React.Fragment>
             <hr />
             <Keg
@@ -31,7 +36,8 @@ function TapRoom(props){
               abv={keg.abv}
               inventory={keg.inventory}
               id={keg.id}
-              onKegClick={props.onKegSelection} />
+              onKegClick={props.onKegSelection}
+              onBeerPuchase={props.onPintSold} />
           </React.Fragment>
         ))}
       </div>

@@ -47,6 +47,7 @@ class App extends React.Component {
           tapList={this.state.tapList}
           onKegSelection={this.handleKegSelection}
           onNewKegPurchase={this.handleNewKegPurchase}
+          onPintSold={this.handlePintPurchase}
         />
       }
     } else {
@@ -58,10 +59,21 @@ class App extends React.Component {
     }
   }
 
+  handlePintPurchase = (id) => {
+    const selectedKeg = this.state.tapList.filter(keg => keg.id === id)[0];
+    const newInventory = selectedKeg.inventory-1;
+    const updatedKeg = {...selectedKeg, inventory: newInventory};
+    const otherKegs = this.state.tapList.filter(keg => keg.id != id);
+    this.setState({
+      tapList: [...otherKegs, updatedKeg]
+    });
+  }
+
   handleNewKegPurchase = (newKeg) => {
     const newTapList = this.state.tapList.concat(newKeg);
     this.setState({tapList: newTapList});
   }
+
   handleKegSelection = (id) => {
     const selectedKeg = this.state.tapList.filter(keg => keg.id ===id)[0];
     this.setState({

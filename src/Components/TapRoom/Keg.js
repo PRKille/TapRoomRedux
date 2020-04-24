@@ -24,7 +24,8 @@ Keg.propTypes = {
   inventory: PropTypes.number,
   name: PropTypes.string,
   price: PropTypes.string,
-  onKegClick: PropTypes.func
+  onKegClick: PropTypes.func,
+  onBeerPuchase: PropTypes.func
 }
 
 export default Keg;
