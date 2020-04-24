@@ -16,7 +16,7 @@ class App extends React.Component {
           brand: "Ranier",
           price: "$3",
           abv: "4.6%",
-          inventory: 124,
+          inventory: 89,
           id: 1
         },
         {
@@ -24,7 +24,7 @@ class App extends React.Component {
           brand: "North Coast Brewing Co",
           price: "$6",
           abv: "9.0%",
-          inventory: 124,
+          inventory: 24,
           id: 2
         },
         {
@@ -32,7 +32,7 @@ class App extends React.Component {
           brand: "Ferment",
           price: "$6",
           abv: "5.4",
-          inventory: 124,
+          inventory: 12,
           id: 3
         }
       ],
