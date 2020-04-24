@@ -21,6 +21,9 @@ _Component structure:_
 
 ## Setup/Installation Requirements
 
+#### Hosted Site
+_You may view the site by visiting [this link](https://prkille.github.io/TapRoom/).
+
 #### Node install
 
 ###### For macOS:
