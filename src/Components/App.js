@@ -54,16 +54,26 @@ class App extends React.Component {
       return{
         component:<KegDetails
           keg={this.state.selectedKeg}
-          handleBackToTapRoom={this.handleBackToTapRoom} />
+          handleBackToTapRoom={this.handleBackToTapRoom}
+          onKegDeletion={this.handleKegDelete} />
       }
     }
+  }
+
+  handleKegDelete = (id) => {
+    const updatedTapList = this.state.tapList.filter(keg => keg.id !== id);
+    this.setState({
+      tapList: updatedTapList,
+      selectedKeg: {},
+      showTapRoom: true
+      });
   }
 
   handlePintPurchase = (id) => {
     const selectedKeg = this.state.tapList.filter(keg => keg.id === id)[0];
     const newInventory = selectedKeg.inventory-1;
     const updatedKeg = {...selectedKeg, inventory: newInventory};
-    const otherKegs = this.state.tapList.filter(keg => keg.id != id);
+    const otherKegs = this.state.tapList.filter(keg => keg.id !== id);
     this.setState({
       tapList: [...otherKegs, updatedKeg]
     });

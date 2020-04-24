@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const KegDetails = (props) => {
+
   return (
     <div>
       <h1>{props.keg.name}</h1>
       <h3>{props.keg.brand}</h3>
       <p>ABV: {props.keg.abv}  Pints Left: {props.keg.inventory}</p>
+      <button onClick={() => props.onKegDeletion(props.keg.id)}>Delete Keg</button>
       <button onClick={props.handleBackToTapRoom}>Back to Tap Room</button>
     </div>
   )
@@ -14,7 +16,8 @@ const KegDetails = (props) => {
 
 KegDetails.propTypes = {
   keg: PropTypes.object,
-  handleBackToTapRoom: PropTypes.func
+  handleBackToTapRoom: PropTypes.func,
+  onKegDeletion: PropTypes.func
 }
 
 export default KegDetails;
