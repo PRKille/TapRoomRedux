@@ -103,7 +103,6 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <p>Under Construction</p>
         {currentPage.component}
       </React.Fragment>
     );

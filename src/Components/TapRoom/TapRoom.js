@@ -1,11 +1,13 @@
 import React from 'react';
 import Keg from './Keg';
+import KegForm from '../KegFolder/KegForm'
 import PropTypes from "prop-types";
 import { v4 } from 'uuid';
 
 function TapRoom(props){
 
   function handleKegPurchaseSubmit(event) {
+    console.log("HandleKegPurchase");
     event.preventDefault();
     props.onNewKegPurchase({
       name: event.target.name.value, 
@@ -26,7 +28,7 @@ function TapRoom(props){
     <React.Fragment>
       <div className="kegs">
         {sortList.map((keg) => (
-          <React.Fragment>
+          <div>
             <hr />
             <Keg
               key={keg.id}
@@ -38,31 +40,16 @@ function TapRoom(props){
               id={keg.id}
               onKegClick={props.onKegSelection}
               onBeerPuchase={props.onPintSold} />
-          </React.Fragment>
+          </div>
         ))}
       </div>
-      
-      <form className="createForm" onSubmit={handleKegPurchaseSubmit}>
+      <div>
         <h3>Buy a new Keg</h3>
-        <input
-          type="text"
-          name="name"
-          placeholder="Beer Name" />
-        <input
-          type="text"
-          name="brand"
-          placeholder="Brewery" />
-        <input
-          type="text"
-          name="price"
-          placeholder="Price per Pint" />
-        <input
-          type="text"
-          name="abv"
-          placeholder="ABV" />
-          
-        <button type='submit'>Buy Keg</button>
-      </form>
+        <KegForm 
+        formSubmissionHandler={handleKegPurchaseSubmit}
+        buttonText="Purchase Keg" />
+      </div>
+      
     </React.Fragment>
   )
 }

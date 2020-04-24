@@ -20,7 +20,7 @@ const Keg = (props) => {
 }
 
 Keg.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   inventory: PropTypes.number,
   name: PropTypes.string,
   price: PropTypes.string,
