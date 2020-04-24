@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './KegForm.css';
 
 function KegForm(props) {
   return (
-    <form className="createForm" onSubmit={props.formSubmissionHandler}>
+    <div className="formControl">
+      <form className="createForm" onSubmit={props.formSubmissionHandler}>
         <input
           type="text"
           name="name"
@@ -22,6 +24,7 @@ function KegForm(props) {
           placeholder="ABV" />
         <button type='submit'>{props.buttonText}</button>
       </form>
+    </div>
   );
 }
 

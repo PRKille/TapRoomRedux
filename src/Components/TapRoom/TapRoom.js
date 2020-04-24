@@ -46,11 +46,10 @@ function TapRoom(props){
       </div>
       <hr />
       <div className="form">
-        <h3>Buy a new Keg: <span>
+        <h3>Buy a new Keg: </h3>
         <KegForm 
         formSubmissionHandler={handleKegPurchaseSubmit}
         buttonText="Purchase Keg" />
-        </span></h3>
       </div>
     </React.Fragment>
   )
