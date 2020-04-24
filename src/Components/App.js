@@ -2,13 +2,62 @@ import React from 'react';
 import '../App.css';
 import Header from './Header';
 
-function App(){
-  return (
-    <React.Fragment>
-      <Header />
-      <p>Under Construction</p>
-    </React.Fragment>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      showTapRoom: true,
+      showKegDetails: false,
+      tapList: [
+        {
+          name: "Ranier",
+          brand: "Ranier",
+          price: "$3",
+          abv: "4.6%",
+          inventory: 124,
+          id: 1
+        },
+        {
+          name: "Old Rasputin Russian Imperial Stout",
+          brand: "North Coast Brewing Co",
+          price: "$6",
+          abv: "9.0%",
+          inventory: 124,
+          id: 2
+        },
+        {
+          name: "ESB English Ale",
+          brand: "Ferment",
+          price: "6",
+          abv: "5.4",
+          inventory: 124,
+          id: 3
+        }
+      ],
+      selectedKeg: {},
+    }
+  }
+
+  currentPage = () => {
+    if (this.state.showTapRoom) {
+      return (
+        <TapRoom
+          tapList={this.state.tapList}
+        />
+      )
+    }
+  }
+  render() {
+
+    return (
+      <React.Fragment>
+        <Header />
+        <p>Under Construction</p>
+        {currentPage}
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
