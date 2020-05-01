@@ -1,5 +1,5 @@
 import tapControlReducer from '../../reducers/tap-control-reducer';
-
+import * as c from './../../actions/ActionTypes';
 let action;
 let tapList = {
   name: "Ranier",
@@ -37,7 +37,7 @@ describe('tapControlReducer', () => {
   test('Should add new keg to tapList', () => {
     const {name,brand,price,abv,inventory,id} = tapList;
     action = {
-      type: 'ADD_KEG',
+      type: c.ADD_KEG,
       name: name,
       brand: brand,
       price: price,
@@ -60,7 +60,7 @@ describe('tapControlReducer', () => {
 
   test('Should delete a keg', () => {
     action = {
-      type: 'DELETE_KEG',
+      type: c.DELET_KEG,
       id: 1
     };
 
