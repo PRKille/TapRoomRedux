@@ -19,7 +19,7 @@ function TapRoom(props){
       id: v4()});
   }
 
-  let sortList = props.tapList.sort((a,b) =>{
+  let sortList = Object.values(props.tapList).sort((a,b) =>{
     const nameA = a.name.toLowerCase();
     const nameB = b.name.toLowerCase();
     return nameA < nameB ? -1 : 1;

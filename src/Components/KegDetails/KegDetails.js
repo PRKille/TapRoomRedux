@@ -7,11 +7,15 @@ const KegDetails = (props) => {
 
   function handleKegEditSubmit(event) {
     event.preventDefault();
+    const name = event.target.name.value ? event.target.name.value : props.keg.name;
+    const brand = event.target.brand.value ? event.target.brand.value : props.keg.brand;
+    const price = event.target.price.value ? event.target.price.value : props.keg.price;
+    const abv = event.target.abv.value ? event.target.abv.value : props.keg.abv;
     props.onKegEdit({
-      name: event.target.name.value, 
-      brand: event.target.brand.value, 
-      price: event.target.price.value, 
-      abv: event.target.abv.value,
+      name: name, 
+      brand:brand, 
+      price: price, 
+      abv: abv,
       inventory: props.keg.inventory,
       id: props.keg.id});
   }

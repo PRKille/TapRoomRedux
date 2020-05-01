@@ -5,14 +5,12 @@ export default (state = {}, action) => {
   switch(action.type) {
     case c.KEG_DETAIL:
       return Object.assign({}, state, {
-        [id]: {
           name: name,
           brand: brand,
           price: price,
           abv: abv,
           inventory: inventory,
           id: id
-        }
       });
     default:
       return state;

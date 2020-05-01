@@ -1,3 +1,4 @@
 export const ADD_KEG = 'ADD_KEG';
-export const DELET_KEG = 'DELETE_KEG';
+export const DELETE_KEG = 'DELETE_KEG';
 export const TOGGLE_DETAIL = 'TOGGLE_DETAIL';
+export const KEG_DETAIL = 'KEG_DETAIL';
