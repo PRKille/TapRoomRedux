@@ -17,7 +17,7 @@
 * As a user, I want to be able to delete a keg.
 
 _Component structure:_
-![component structure](./TapRoom.jpg)
+![component structure](./TapRoomRedux.png)
 
 ## Setup/Installation Requirements
 
@@ -61,6 +61,7 @@ _Open the contents of the directory in a text editor or IDE of your choice (e.g.
 * npm
 * Webpack
 * React
+* Redux
 
 ### License
 
