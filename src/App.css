@@ -44,8 +44,8 @@ input {
 button {
   box-shadow:inset 0px 1px 0px 0px #ffffff;
 	background:linear-gradient(to bottom, #555452 5%, #000000 100%);
-	border-radius:9px;
-	border:1px solid #b1b0af;
+	/* border-radius:9px; */
+	border:2px raised #b1b0af;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -63,4 +63,5 @@ button:hover {
 button:active {
 	position:relative;
 	top:1px;
+	border: 2px inset;
 }
