@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const Keg = (props) => {
 
   function hasInventory(count) {
-    return count > 10 ? <button className="purchaseButton" onClick={() => props.onBeerPuchase(props.id)}>Purchase</button>
-      : count <= 10 && count > 0 ? <React.Fragment><p>Almost Out!</p><button className="purchaseButton" onClick={() => props.onBeerPuchase(props.id)}>Purchase</button></React.Fragment>
+    return count > 10 ? <button onClick={() => props.onBeerPuchase(props.id)}>Purchase</button>
+      : count <= 10 && count > 0 ? <React.Fragment><p>Almost Out!</p><button onClick={() => props.onBeerPuchase(props.id)}>Purchase</button></React.Fragment>
       : <p>Sold Out!</p>;
   }
 
@@ -15,7 +15,7 @@ const Keg = (props) => {
       <h4>ABV: {props.abv} Price/Pint: {props.price}</h4>
       <h4>Pints Remaining: {props.inventory}</h4>
       {hasInventory(props.inventory)}
-      <button className="purchaseButton" onClick={() => props.onKegClick(props.id)}>Beer Details</button>
+      <button onClick={() => props.onKegClick(props.id)}>Beer Details</button>
     </div>
   )
 }

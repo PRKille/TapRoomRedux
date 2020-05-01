@@ -1,3 +1,14 @@
+body {
+  background-color: darkgray;
+}
+
+h1, h3, h4, p{
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+  padding: 1%;
+}
+
 .header {
   text-align: center;
   font-size: xx-large;
@@ -7,11 +18,30 @@
   font-family: fantasy;
 }
 
-.form {
-  background-color: rgba(250, 235, 215, 0.486);
+.keg {
+	text-align: center;
+	background-color: rgba(250, 235, 215, 0.274);
+  max-width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
-.detailsButton {
+.kegs {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+form {
+	background-color: lightslategrey;
+}
+
+input {
+  margin-left: 5px;
+  border-radius: 9px;
+  text-align: center;
+}
+
+button {
   box-shadow:inset 0px 1px 0px 0px #ffffff;
 	background:linear-gradient(to bottom, #555452 5%, #000000 100%);
 	border-radius:9px;
@@ -25,10 +55,12 @@
 	padding:6px 24px;
 	text-decoration:none;
 }
-.detailsButton:hover {
+
+button:hover {
 	background-color:transparent;
 }
-.detailsButton:active {
+
+button:active {
 	position:relative;
 	top:1px;
 }

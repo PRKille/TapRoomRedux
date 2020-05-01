@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './KegForm.css';
 
 function KegForm(props) {
   return (
-    <div className="formControl">
-      <form className="createForm" onSubmit={props.formSubmissionHandler}>
+    <div>
+      <form onSubmit={props.formSubmissionHandler}>
         <input
           type="text"
           name="name"
