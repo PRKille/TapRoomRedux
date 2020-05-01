@@ -32,7 +32,6 @@ function TapRoom(props){
           <div>
             <hr />
             <Keg
-              key={keg.id}
               name={keg.name}
               brand={keg.brand}
               price={keg.price}
@@ -56,7 +55,7 @@ function TapRoom(props){
 }
 
 TapRoom.propTypes = {
-  tapList: PropTypes.arrayOf(PropTypes.object),
+  tapList: PropTypes.object,
   onNewKegPurchase: PropTypes.func,
   onKegSelection: PropTypes.func
 }
