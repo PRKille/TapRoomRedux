@@ -1,6 +1,5 @@
 import React from 'react';
 import '../App.css';
-import Header from './Header';
 import TapRoom from './TapRoom/TapRoom';
 import KegDetails from './KegDetails/KegDetails';
 
