@@ -41,7 +41,7 @@ class TapControl extends React.Component {
     const {dispatch} = this.props;
     const action = a.deleteKeg(id);
     dispatch(action);
-    const action2 = a.kegDetail();
+    const action2 = a.toggleDetail();
     dispatch(action2);
   }
 

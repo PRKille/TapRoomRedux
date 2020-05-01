@@ -13,6 +13,7 @@ const Keg = (props) => {
     <div className="keg" id={props.id}>
       <h3>{props.name}</h3>
       <h4>ABV: {props.abv} Price/Pint: {props.price}</h4>
+      <h4>Pints Remaining: {props.inventory}</h4>
       {hasInventory(props.inventory)}
       <button className="purchaseButton" onClick={() => props.onKegClick(props.id)}>Beer Details</button>
     </div>
