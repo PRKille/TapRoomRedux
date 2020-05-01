@@ -1,5 +1,6 @@
 import tapControlReducer from '../../reducers/tap-control-reducer';
 import * as c from './../../actions/ActionTypes';
+
 let action;
 let tapList = {
   name: "Ranier",
@@ -60,7 +61,7 @@ describe('tapControlReducer', () => {
 
   test('Should delete a keg', () => {
     action = {
-      type: c.DELET_KEG,
+      type: c.DELETE_KEG,
       id: 1
     };
 

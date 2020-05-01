@@ -1,8 +1,20 @@
-export default (state = true, action) => {
-  switch (action.type) {
-  case 'TOGGLE_DETAIL':
-    return !state;
-  default:
-    return state;
+import * as c from './../actions/ActionTypes';
+
+export default (state = {}, action) => {
+  const {name, brand, price, abv, inventory, id} = action;
+  switch(action.type) {
+    case c.KEG_DETAIL:
+      return Object.assign({}, state, {
+        [id]: {
+          name: name,
+          brand: brand,
+          price: price,
+          abv: abv,
+          inventory: inventory,
+          id: id
+        }
+      });
+    default:
+      return state;
   }
-};
+}
