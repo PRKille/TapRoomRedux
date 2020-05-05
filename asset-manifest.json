@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TapRoomRedux/static/css/main.59bbe77b.chunk.css",
+    "main.js": "/TapRoomRedux/static/js/main.47620258.chunk.js",
+    "main.js.map": "/TapRoomRedux/static/js/main.47620258.chunk.js.map",
+    "runtime-main.js": "/TapRoomRedux/static/js/runtime-main.4d8c5118.js",
+    "runtime-main.js.map": "/TapRoomRedux/static/js/runtime-main.4d8c5118.js.map",
+    "static/js/2.3d73cfc9.chunk.js": "/TapRoomRedux/static/js/2.3d73cfc9.chunk.js",
+    "static/js/2.3d73cfc9.chunk.js.map": "/TapRoomRedux/static/js/2.3d73cfc9.chunk.js.map",
+    "index.html": "/TapRoomRedux/index.html",
+    "precache-manifest.ac47fdbdf1fc7716f9ad0e2388933568.js": "/TapRoomRedux/precache-manifest.ac47fdbdf1fc7716f9ad0e2388933568.js",
+    "service-worker.js": "/TapRoomRedux/service-worker.js",
+    "static/css/main.59bbe77b.chunk.css.map": "/TapRoomRedux/static/css/main.59bbe77b.chunk.css.map",
+    "static/js/2.3d73cfc9.chunk.js.LICENSE.txt": "/TapRoomRedux/static/js/2.3d73cfc9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4d8c5118.js",
+    "static/js/2.3d73cfc9.chunk.js",
+    "static/css/main.59bbe77b.chunk.css",
+    "static/js/main.47620258.chunk.js"
+  ]
+}
